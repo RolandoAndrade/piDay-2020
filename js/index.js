@@ -2,10 +2,11 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 const series = new LeibnizSeries();
+const history = new History();
 
 function loop()
 {
-    console.log(series.calculate());
+    history.add(series.calculate()).plot(ctx);
 }
 
 window.setInterval(loop,500);
