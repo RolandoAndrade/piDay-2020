@@ -6,9 +6,7 @@ const history = new History();
 
 function loop()
 {
-    const a = series.calculate();
-    console.log(a);
-    history.add(a).plot(ctx);
+    history.add(series.calculate()).plot(ctx);
 }
 
 window.setInterval(loop,200);
